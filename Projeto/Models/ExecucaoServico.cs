@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -14,7 +15,7 @@ namespace Projeto.Models
         [Display(Name = "Data Execucao Servico")]
         public DateTime Data { get; set; }
 
-        public ServicoCliente ServicoCliente { get; set; }
+        public ICollection<ServicoCliente> ServicoCliente { get; set; } = new List<ServicoCliente>();
 
         public ExecucaoServico()
         {
