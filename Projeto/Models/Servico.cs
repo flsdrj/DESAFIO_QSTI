@@ -12,6 +12,9 @@ namespace Projeto.Models
         [Display(Name = "Descricao")]
         public string Descricao { get; set; }
 
+        public ServicoCliente ServicoCliente { get; set; }
+        public Cliente Cliente { get; set; }
+
         public Servico()
         {
 

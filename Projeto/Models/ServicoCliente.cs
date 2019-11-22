@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Projeto.Models
@@ -15,6 +16,13 @@ namespace Projeto.Models
 
         [Display(Name = "Versao")]
         public int Versao { get; set; }
+
+        public ExecucaoServico ExecucaoServico { get; set; }
+   
+        public ICollection<Cliente> Clientes { get; set; } = new List<Cliente>();
+        public ICollection<Servico> Servicos { get; set; } = new List<Servico>();
+
+
 
         public ServicoCliente()
         {
