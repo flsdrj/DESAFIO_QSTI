@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Projeto.Models.ViewModel;
 
@@ -12,7 +8,11 @@ namespace Projeto.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            ViewData["H1"] = "Sejam Bem Vindos!";
+            ViewData["H2"] = "Projeto Desafio QSTI";
+            ViewData["Message"] = "Desenvolvedor: Francisco Luiz";
+            ViewData["Email"] = "flsdrj@hotmail.com";
+            return View(ViewData);
         }
 
         public IActionResult Privacy()
